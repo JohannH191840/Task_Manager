@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port= 3000;
+
 
 app.set('view engine' ,'ejs');
 app.set('views', './views');
@@ -37,7 +37,7 @@ app.post('/edit/:id', (req, res) => {
     res.redirect('/');
 });
 
-const PORT = process.env.OIRT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`)
